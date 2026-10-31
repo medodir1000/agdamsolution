@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AGDAM SOLUTION SARL — Travaux divers et construction à Agadir</title>
+<meta name="description" content="AGDAM SOLUTION SARL, entreprise de travaux divers et de construction basée à Aourir, Agadir (Maroc).">
+<meta name="theme-color" content="#14213d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314213d'/%3E%3Cpath d='M14 46 32 16l18 30H40l-8-14-8 14z' fill='%23f2a93b'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --navy: #14213d;
+    --navy-2: #1d2f57;
+    --amber: #f2a93b;
+    --amber-d: #d98e1f;
+    --ink: #1b1f2a;
+    --muted: #5b6475;
+    --line: #e4e7ee;
+    --bg: #f7f8fb;
+    --card: #ffffff;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 16px/1.6 "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  [dir="rtl"] body { font-family: "Segoe UI", Tahoma, "Noto Naskh Arabic", Arial, sans-serif; }
+  a { color: inherit; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+  /* header */
+  header { position: sticky; top: 0; z-index: 10; background: rgba(20,33,61,.97); color: #fff; }
+  .bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; letter-spacing: .5px; }
+  .brand svg { width: 34px; height: 34px; flex: none; }
+  .brand small { display: block; font-weight: 500; font-size: 11px; opacity: .7; letter-spacing: 1.5px; }
+  nav { display: flex; align-items: center; gap: 22px; }
+  nav a { text-decoration: none; font-size: 15px; opacity: .85; }
+  nav a:hover { opacity: 1; color: var(--amber); }
+  .lang { border: 1px solid rgba(255,255,255,.35); background: transparent; color: #fff; border-radius: 999px; padding: 6px 14px; font: inherit; font-size: 14px; cursor: pointer; }
+  .lang:hover { border-color: var(--amber); color: var(--amber); }
+  @media (max-width: 720px) { nav .link { display: none; } }
+
+  /* hero */
+  .hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%); color: #fff; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; padding-top: 64px; padding-bottom: 72px; }
+  .tag { display: inline-block; background: rgba(242,169,59,.15); color: var(--amber); border: 1px solid rgba(242,169,59,.4); border-radius: 999px; padding: 4px 12px; font-size: 13px; font-weight: 600; }
+  h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.15; margin: 16px 0 14px; }
+  h1 span { color: var(--amber); }
+  .hero p { font-size: 18px; opacity: .85; max-width: 520px; margin: 0 0 26px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; padding: 13px 22px; border-radius: 10px; }
+  .btn.primary { background: var(--amber); color: var(--navy); }
+  .btn.primary:hover { background: var(--amber-d); }
+  .btn.ghost { border: 1px solid rgba(255,255,255,.4); color: #fff; }
+  .btn.ghost:hover { border-color: var(--amber); color: var(--amber); }
+  .hero-art { width: 100%; max-width: 420px; justify-self: center; }
+  @media (max-width: 820px) {
+    .hero .wrap { grid-template-columns: 1fr; padding-top: 44px; padding-bottom: 52px; }
+    .hero-art { max-width: 300px; }
+  }
+
+  /* sections */
+  section { padding: 72px 0; }
+  .eyebrow { color: var(--amber-d); font-weight: 700; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; }
+  [dir="rtl"] .eyebrow { letter-spacing: 0; }
+  h2 { font-size: clamp(24px, 3.4vw, 34px); margin: 6px 0 12px; color: var(--navy); }
+  .lead { color: var(--muted); max-width: 640px; margin: 0 0 36px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+  .card .ic { width: 46px; height: 46px; border-radius: 12px; background: rgba(242,169,59,.14); display: grid; place-items: center; margin-bottom: 14px; }
+  .card .ic svg { width: 24px; height: 24px; stroke: var(--amber-d); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .card h3 { margin: 0 0 6px; font-size: 18px; color: var(--navy); }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  .about { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .about .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
+  .facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .facts li { display: flex; gap: 12px; align-items: flex-start; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .facts b { display: block; color: var(--navy); font-size: 14px; }
+  .facts span { color: var(--muted); font-size: 15px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--amber); margin-top: 7px; flex: none; }
+  @media (max-width: 820px) { .about .wrap { grid-template-columns: 1fr; gap: 24px; } }
+
+  .steps { counter-reset: s; }
+  .steps .card { position: relative; padding-top: 30px; }
+  .steps .card::before { counter-increment: s; content: counter(s); position: absolute; top: -14px; inset-inline-start: 22px; width: 30px; height: 30px; border-radius: 50%; background: var(--navy); color: var(--amber); font-weight: 800; display: grid; place-items: center; font-size: 14px; }
+
+  /* contact */
+  .contact { background: var(--navy); color: #fff; }
+  .contact h2 { color: #fff; }
+  .contact .lead { color: rgba(255,255,255,.75); }
+  .contact .grid .card { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.14); }
+  .contact .card h3 { color: var(--amber); font-size: 15px; text-transform: uppercase; letter-spacing: 1px; }
+  [dir="rtl"] .contact .card h3 { letter-spacing: 0; }
+  .contact .card p, .contact .card a { color: #fff; font-size: 16px; text-decoration: none; word-break: break-word; }
+  .contact .card a:hover { color: var(--amber); }
+  .map { margin-top: 18px; border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(255,255,255,.14); }
+  .map iframe { display: block; width: 100%; height: 300px; border: 0; }
+
+  /* legal + footer */
+  .legal { background: #fff; border-top: 1px solid var(--line); padding: 44px 0; }
+  .legal h2 { font-size: 22px; }
+  .legal dl { display: grid; grid-template-columns: max-content 1fr; gap: 8px 24px; margin: 0; font-size: 15px; }
+  .legal dt { color: var(--muted); }
+  .legal dd { margin: 0; font-weight: 600; color: var(--navy); }
+  @media (max-width: 560px) { .legal dl { grid-template-columns: 1fr; gap: 2px; } .legal dd { margin-bottom: 10px; } }
+  footer { background: #0e1730; color: rgba(255,255,255,.65); font-size: 14px; padding: 22px 0; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="AGDAM SOLUTION">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1d2f57"/><path d="M14 46 32 16l18 30H40l-8-14-8 14z" fill="#f2a93b"/></svg>
+      <span>AGDAM SOLUTION<small>SARL</small></span>
+    </a>
+    <nav>
+      <a class="link" href="#services" data-i18n="nav_services">Services</a>
+      <a class="link" href="#about" data-i18n="nav_about">L'entreprise</a>
+      <a class="link" href="#contact" data-i18n="nav_contact">Contact</a>
+      <button class="lang" id="lang" type="button">العربية</button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="tag" data-i18n="hero_tag">Agadir · Aourir</span>
+        <h1 data-i18n-html="hero_title">Travaux divers et <span>construction</span> dans la région d'Agadir</h1>
+        <p data-i18n="hero_text">AGDAM SOLUTION SARL accompagne particuliers et professionnels dans leurs projets de construction, de rénovation et d'aménagement.</p>
+        <div class="btns">
+          <a class="btn primary" href="#contact" data-i18n="cta_quote">Demander un devis</a>
+          <a class="btn ghost" href="#services" data-i18n="cta_services">Nos services</a>
+        </div>
+      </div>
+      <svg class="hero-art" viewBox="0 0 400 320" aria-hidden="true">
+        <rect x="20" y="290" width="360" height="6" rx="3" fill="#f2a93b" opacity=".5"/>
+        <g fill="none" stroke="#f2a93b" stroke-width="5" stroke-linecap="round">
+          <path d="M300 290V40M300 40H120M300 40l40 30M300 70l-30-30"/>
+          <path d="M150 40v60"/>
+        </g>
+        <rect x="132" y="100" width="36" height="22" rx="3" fill="#f2a93b"/>
+        <g fill="#ffffff" opacity=".9">
+          <rect x="60" y="170" width="150" height="120" rx="4" opacity=".14"/>
+          <rect x="60" y="170" width="150" height="10" opacity=".5"/>
+          <rect x="78" y="196" width="30" height="30" rx="3" opacity=".55"/>
+          <rect x="122" y="196" width="30" height="30" rx="3" opacity=".55"/>
+          <rect x="166" y="196" width="30" height="30" rx="3" opacity=".55"/>
+          <rect x="78" y="240" width="30" height="30" rx="3" opacity=".55"/>
+          <rect x="122" y="240" width="30" height="50" rx="3" fill="#f2a93b" opacity="1"/>
+          <rect x="166" y="240" width="30" height="30" rx="3" opacity=".55"/>
+        </g>
+        <g stroke="#ffffff" stroke-opacity=".35" stroke-width="3">
+          <path d="M228 290V150M268 290V150M228 190h40M228 230h40M228 150h40"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="eyebrow" data-i18n="svc_eyebrow">Nos services</div>
+      <h2 data-i18n="svc_title">Des travaux réalisés avec soin, du gros œuvre aux finitions</h2>
+      <p class="lead" data-i18n="svc_lead">Nous intervenons sur des chantiers de tailles variées, en respectant les délais convenus et les règles de l'art.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg></div>
+          <h3 data-i18n="s1_t">Construction</h3>
+          <p data-i18n="s1_d">Gros œuvre : fondations, maçonnerie, structures et dalles pour bâtiments résidentiels et professionnels.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+          <h3 data-i18n="s2_t">Rénovation</h3>
+          <p data-i18n="s2_d">Remise en état et modernisation de maisons, appartements, commerces et locaux.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 16l8-8 4 4-8 8H6zM14 8l2-2 4 4-2 2"/></svg></div>
+          <h3 data-i18n="s3_t">Finitions</h3>
+          <p data-i18n="s3_d">Second œuvre : enduits, carrelage, peinture, plâtre et petits aménagements intérieurs.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h18M3 12h18M3 17h18M7 3v18M17 3v18"/></svg></div>
+          <h3 data-i18n="s4_t">Travaux divers</h3>
+          <p data-i18n="s4_d">Clôtures, murs, aménagements extérieurs et interventions ponctuelles selon vos besoins.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow" data-i18n="about_eyebrow">L'entreprise</div>
+        <h2 data-i18n="about_title">Une entreprise locale, au service de la région d'Agadir</h2>
+        <p class="lead" data-i18n="about_text">AGDAM SOLUTION est une société à responsabilité limitée (SARL) de droit marocain, dont le siège se trouve à Aourir, dans la banlieue d'Agadir. Son activité porte sur les travaux divers et de construction.</p>
+      </div>
+      <ul class="facts">
+        <li><i class="dot"></i><div><b data-i18n="f1_t">Raison sociale</b><span>AGDAM SOLUTION SARL</span></div></li>
+        <li><i class="dot"></i><div><b data-i18n="f2_t">Activité</b><span data-i18n="f2_d">Travaux divers ou de construction</span></div></li>
+        <li><i class="dot"></i><div><b data-i18n="f3_t">Siège</b><span data-i18n="addr">Hay Bikharbichen, Aourir, Agadir Banlieue, Maroc</span></div></li>
+        <li><i class="dot"></i><div><b data-i18n="f4_t">Zone d'intervention</b><span data-i18n="f4_d">Agadir, Aourir, Taghazout et environs</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow" data-i18n="how_eyebrow">Comment ça marche</div>
+      <h2 data-i18n="how_title">De votre demande à la fin du chantier</h2>
+      <p class="lead" data-i18n="how_lead">Une démarche simple et transparente à chaque étape.</p>
+      <div class="grid steps">
+        <div class="card"><h3 data-i18n="st1_t">Prise de contact</h3><p data-i18n="st1_d">Vous nous décrivez votre projet par téléphone ou par e-mail.</p></div>
+        <div class="card"><h3 data-i18n="st2_t">Visite et devis</h3><p data-i18n="st2_d">Nous évaluons le chantier sur place et vous remettons un devis détaillé.</p></div>
+        <div class="card"><h3 data-i18n="st3_t">Réalisation</h3><p data-i18n="st3_d">Les travaux sont réalisés selon le planning convenu, avec un suivi régulier.</p></div>
+        <div class="card"><h3 data-i18n="st4_t">Réception</h3><p data-i18n="st4_d">Nous vérifions ensemble le résultat avant la remise du chantier.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="eyebrow" data-i18n="ct_eyebrow">Contact</div>
+      <h2 data-i18n="ct_title">Parlons de votre projet</h2>
+      <p class="lead" data-i18n="ct_lead">Contactez-nous pour toute demande de renseignement ou de devis.</p>
+      <div class="grid">
+        <div class="card"><h3 data-i18n="ct_addr">Adresse</h3><p data-i18n="addr">Hay Bikharbichen, Aourir, Agadir Banlieue, Maroc</p></div>
+        <div class="card" id="c-phone" hidden><h3 data-i18n="ct_phone">Téléphone</h3><p><a id="phone-link" href="#" dir="ltr"></a></p></div>
+        <div class="card" id="c-email" hidden><h3 data-i18n="ct_email">E-mail</h3><p><a id="email-link" href="#"></a></p></div>
+        <div class="card" id="c-wa" hidden><h3>WhatsApp</h3><p><a id="wa-link" href="#" target="_blank" rel="noopener" data-i18n="ct_wa">Écrire sur WhatsApp</a></p></div>
+      </div>
+      <div class="map">
+        <iframe title="Aourir, Agadir" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Aourir%2C%20Agadir%2C%20Maroc&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="legal" id="legal">
+    <div class="wrap">
+      <h2 data-i18n="lg_title">Mentions légales</h2>
+      <dl>
+        <dt data-i18n="f1_t">Raison sociale</dt><dd>AGDAM SOLUTION SARL</dd>
+        <dt data-i18n="lg_form">Forme juridique</dt><dd data-i18n="lg_form_v">Société à responsabilité limitée (SARL)</dd>
+        <dt data-i18n="f3_t">Siège</dt><dd data-i18n="addr">Hay Bikharbichen, Aourir, Agadir Banlieue, Maroc</dd>
+        <dt data-i18n="f2_t">Activité</dt><dd data-i18n="f2_d">Travaux divers ou de construction</dd>
+        <dt id="rc-t" hidden>RC</dt><dd id="rc-v" hidden></dd>
+        <dt id="ice-t" hidden>ICE</dt><dd id="ice-v" hidden></dd>
+        <dt id="lgm-t" hidden data-i18n="ct_email">E-mail</dt><dd id="lgm-v" hidden></dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> AGDAM SOLUTION SARL</span>
+    <span data-i18n="ft_loc">Aourir · Agadir · Maroc</span>
+  </div>
+</footer>
+
+<script>
+  // Company details. Fill these in from the official documents (RC certificate,
+  // ICE); empty values stay hidden on the page.
+  const COMPANY = {
+    phone: "",     // e.g. "+212 6 00 00 00 00"
+    email: "",     // e.g. "contact@agdamsolution.ma"
+    whatsapp: "",  // digits only with country code, e.g. "212600000000"
+    rc: "",        // Registre de Commerce number
+    ice: ""        // Identifiant Commun de l'Entreprise
+  };
+
+  const AR = {
+    nav_services: "خدماتنا", nav_about: "الشركة", nav_contact: "اتصل بنا",
+    hero_tag: "أكادير · أورير",
+    hero_title: "أشغال مختلفة و<span>بناء</span> في منطقة أكادير",
+    hero_text: "ترافق شركة AGDAM SOLUTION SARL الخواص والمهنيين في مشاريع البناء والترميم والتهيئة.",
+    cta_quote: "اطلب عرض سعر", cta_services: "خدماتنا",
+    svc_eyebrow: "خدماتنا", svc_title: "أشغال منجزة بعناية، من الأشغال الكبرى إلى اللمسات النهائية",
+    svc_lead: "نتدخل في أوراش بأحجام مختلفة، مع احترام الآجال المتفق عليها وقواعد المهنة.",
+    s1_t: "البناء", s1_d: "الأشغال الكبرى: الأساسات، البناء، الهياكل والبلاطات للمباني السكنية والمهنية.",
+    s2_t: "الترميم", s2_d: "إصلاح وتحديث المنازل والشقق والمحلات التجارية.",
+    s3_t: "التشطيبات", s3_d: "الأشغال الثانوية: التلبيس، الزليج، الصباغة، الجبس والتهيئة الداخلية.",
+    s4_t: "أشغال مختلفة", s4_d: "الأسوار، الجدران، التهيئة الخارجية وتدخلات حسب حاجتكم.",
+    about_eyebrow: "الشركة", about_title: "شركة محلية في خدمة منطقة أكادير",
+    about_text: "AGDAM SOLUTION شركة ذات مسؤولية محدودة (SARL) خاضعة للقانون المغربي، يوجد مقرها بأورير في ضواحي أكادير. نشاطها: الأشغال المختلفة والبناء.",
+    f1_t: "الاسم التجاري", f2_t: "النشاط", f2_d: "أشغال مختلفة أو البناء",
+    f3_t: "المقر", addr: "حي بيخربيشن، أورير، ضواحي أكادير، المغرب",
+    f4_t: "منطقة التدخل", f4_d: "أكادير، أورير، تغازوت والنواحي",
+    how_eyebrow: "كيف نعمل", how_title: "من طلبكم إلى نهاية الورش", how_lead: "خطوات بسيطة وواضحة في كل مرحلة.",
+    st1_t: "التواصل", st1_d: "تصفون لنا مشروعكم عبر الهاتف أو البريد الإلكتروني.",
+    st2_t: "الزيارة وعرض السعر", st2_d: "نعاين الورش في عين المكان ونقدم لكم عرض سعر مفصل.",
+    st3_t: "الإنجاز", st3_d: "تنجز الأشغال حسب الجدول المتفق عليه مع تتبع منتظم.",
+    st4_t: "التسليم", st4_d: "نتحقق معكم من النتيجة قبل تسليم الورش.",
+    ct_eyebrow: "اتصل بنا", ct_title: "لنتحدث عن مشروعكم", ct_lead: "تواصلوا معنا لأي استفسار أو طلب عرض سعر.",
+    ct_addr: "العنوان", ct_phone: "الهاتف", ct_email: "البريد الإلكتروني", ct_wa: "راسلونا على واتساب",
+    lg_title: "معلومات قانونية", lg_form: "الشكل القانوني", lg_form_v: "شركة ذات مسؤولية محدودة (SARL)",
+    ft_loc: "أورير · أكادير · المغرب"
+  };
+
+  // Snapshot the French text so the page can switch back.
+  const FR = {};
+  document.querySelectorAll("[data-i18n]").forEach(el => FR[el.dataset.i18n] ??= el.textContent);
+  document.querySelectorAll("[data-i18n-html]").forEach(el => FR[el.dataset.i18nHtml] ??= el.innerHTML);
+
+  function setLang(lang) {
+    const t = lang === "ar" ? AR : FR;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    document.querySelectorAll("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (v) el.textContent = v; });
+    document.querySelectorAll("[data-i18n-html]").forEach(el => { const v = t[el.dataset.i18nHtml]; if (v) el.innerHTML = v; });
+    document.getElementById("lang").textContent = lang === "ar" ? "Français" : "العربية";
+    try { localStorage.setItem("agdam-lang", lang); } catch (e) {}
+  }
+
+  function show(id, on) { document.getElementById(id).hidden = !on; }
+
+  if (COMPANY.phone) {
+    const a = document.getElementById("phone-link");
+    a.textContent = COMPANY.phone;
+    a.href = "tel:" + COMPANY.phone.replace(/\s+/g, "");
+    show("c-phone", true);
+  }
+  if (COMPANY.email) {
+    const a = document.getElementById("email-link");
+    a.textContent = COMPANY.email;
+    a.href = "mailto:" + COMPANY.email;
+    show("c-email", true);
+    document.getElementById("lgm-v").textContent = COMPANY.email;
+    show("lgm-t", true); show("lgm-v", true);
+  }
+  if (COMPANY.whatsapp) {
+    document.getElementById("wa-link").href = "https://wa.me/" + COMPANY.whatsapp;
+    show("c-wa", true);
+  }
+  for (const k of ["rc", "ice"]) {
+    if (COMPANY[k]) {
+      document.getElementById(k + "-v").textContent = COMPANY[k];
+      show(k + "-t", true); show(k + "-v", true);
+    }
+  }
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  document.getElementById("lang").addEventListener("click", () =>
+    setLang(document.documentElement.lang === "ar" ? "fr" : "ar"));
+  let saved = null;
+  try { saved = localStorage.getItem("agdam-lang"); } catch (e) {}
+  if (saved === "ar") setLang("ar");
+</script>
+</body>
+</html>
